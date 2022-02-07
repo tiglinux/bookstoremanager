@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * Book Store Manager created by : Tiago Ribeiro Santos
- * Develop with : SpringBoot,JAVA,SQL technologies.
+ * Develop with : SpringBoot,JAVA,JPA,DAO,SQL Technologies.
  *
  * Email : tiago.programador@hotmail.com
  */
