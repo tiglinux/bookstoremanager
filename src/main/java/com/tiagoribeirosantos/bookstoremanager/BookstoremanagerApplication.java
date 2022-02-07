@@ -2,8 +2,14 @@ package com.tiagoribeirosantos.bookstoremanager;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+
+/**
+ * Book Store Manager created by : Tiago Ribeiro Santos
+ * Develop with : SpringBoot,JAVA,SQL technologies.
+ *
+ * Email : tiago.programador@hotmail.com
+ */
+
 
 @SpringBootApplication
 public class BookstoremanagerApplication {
