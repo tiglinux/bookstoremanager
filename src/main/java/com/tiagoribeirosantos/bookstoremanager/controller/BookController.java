@@ -2,8 +2,6 @@ package com.tiagoribeirosantos.bookstoremanager.controller;
 
 import com.tiagoribeirosantos.bookstoremanager.dto.BookDTO;
 import com.tiagoribeirosantos.bookstoremanager.dto.MessageResponseDTO;
-import com.tiagoribeirosantos.bookstoremanager.entity.Book;
-import com.tiagoribeirosantos.bookstoremanager.repository.BookRepository;
 import com.tiagoribeirosantos.bookstoremanager.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
