@@ -8,8 +8,6 @@ import com.tiagoribeirosantos.bookstoremanager.repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Optional;
-
 @Service
 public class BookService {
 
@@ -31,8 +29,16 @@ public class BookService {
                 .build();
     }
 
-    public BookDTO findById(Long id) {
-        Optional<Book> optionalBook = bookRepository.findById(id);
-        return bookMapper.toDto(optionalBook.get());
+    public BookDTO findById(Long id) throws BookNotFoundException {
+        Book book = bookRepository.findById(id)
+                .orElseThrow(() -> new BookNotFoundException(id));
+
+        return bookMapper.toDto(book);
+    }
+
+    public class BookNotFoundException extends Exception {
+        public BookNotFoundException(Long id) {
+            super(String.format("Book with ID not found", id));
+        }
     }
 }
