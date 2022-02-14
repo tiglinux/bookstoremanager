@@ -8,6 +8,8 @@ import com.tiagoribeirosantos.bookstoremanager.repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class BookService {
 
@@ -27,5 +29,10 @@ public class BookService {
         return MessageResponseDTO.builder()
                 .message("Livro criado com sucesso com ID: " + savedBook.getId())
                 .build();
+    }
+
+    public BookDTO findById(Long id) {
+        Optional<Book> optionalBook = bookRepository.findById(id);
+        return bookMapper.toDto(optionalBook.get());
     }
 }
